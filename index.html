@@ -1,72 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Ceanna’s Calendar 💕</title>
-<style>
-  * {
-    box-sizing: border-box;
-  }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CeAnna’s Calendar 💕</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-  html, body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: #fff0f5;
-  }
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff0f5;
+    }
 
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    min-height: 80vh;
-  }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 20px;
+      min-height: 80vh;
+    }
 
-  .calendar {
-    background: #ffe4e1;
-    border-radius: 20px;
-    padding: 20px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    width: 100%;
-    max-width: 400px;
-  }
+    .calendar {
+      background: #ffe4e1;
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+    }
 
-  .calendar h2 {
-    text-align: center;
-    color: #ff69b4;
-    margin: 10px 0;
-    font-size: 34px;
-  }
+    .calendar h2 {
+      text-align: center;
+      color: #ff69b4;
+      margin: 10px 0;
+      font-size: 30px;
+    }
 
-  .month {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #d63384;
-    font-weight: bold;
-    margin: 10px 0;
-    font-size: 34px;
-  }
+    .month {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #d63384;
+      font-weight: bold;
+      margin: 10px 0;
+      font-size: 25px;
+    }
 
-  .month button {
-    background: #ffb6c1;
-    border: none;
-    border-radius: 10px;
-    padding: 6px 12px;
-    cursor: pointer;
-    font-size: 30px;
-  }
+    .month button {
+      background: #ffb6c1;
+      border: none;
+      border-radius: 10px;
+      padding: 6px 12px;
+      cursor: pointer;
+      font-size: 20px;
+    }
 
-  .weekdays, .days {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    text-align: center;
-    gap: 6px;
-  }
+    .weekdays, .days {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      text-align: center;
+      gap: 6px;
+    }
 
-  .weekdays div {
+    .weekdays div {
     font-weight: bolder;
     color: #c71585;
     font-size: 21px;
@@ -79,8 +80,7 @@
   font-weight: bold;
 }
 
-
-  .days div {
+     .days div {
     background: #fff;
     padding: 10px 0;
     border-radius: 10px;
@@ -98,143 +98,135 @@
 .days div:nth-child(7n + 6),
 .days div:nth-child(7n + 7) {
   background-color: white;
-  color: #cc3366;
+  color: #ce0b4c;
   font-weight: bold;
 }
 
-
-  .weekend {
-    background-color: #ffe0e0;
-    color: #cc3366;
-    font-weight: bold;
-  }
-
-  /* Today's date with heart emoji background */
-  .today {
-    position: relative;
-    font-weight: bold;
-    font-size: 18px;
-    color: #fff;
-    cursor: default;
-  }
-
-  .today::before {
-    content: "💗";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 36px;
-    z-index: 0;
-    user-select: none;
-  }
-
-  .today span {
-    position: relative;
-    z-index: 1;
-  }
-
-  
-
-  @media (max-width: 768px) {
-    .calendar {
-      border-radius: 12px;
-      padding: 16px;
-      margin-top: 10px;
+    .weekend {
+      background-color: #ffccd5;
+      color: #d40349;
+      font-weight: bold;
     }
 
-    .calendar h2 {
-      font-size: 28px;
-    }
-
-    .month {
-      font-size: 34px;
-    }
-
-    .month button {
-      font-size: 28px;
-      padding: 4px 8px;
-    }
-
-    .days div, .weekdays div {
+    .today {
+      position: relative;
+      font-weight: bold;
       font-size: 18px;
-      padding: 8px 0;
-      font-weight: bolder;
+      color: #fff;
+      cursor: default;
     }
-  }
-</style>
+
+    .today::before {
+      content: "💗";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 36px;
+      z-index: 0;
+      user-select: none;
+    }
+
+    .today span {
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (max-width: 768px) {
+      .calendar {
+        border-radius: 12px;
+        padding: 16px;
+        margin-top: 10px;
+      }
+
+      .calendar h2 {
+        font-size: 30px;
+      }
+
+      .month {
+        font-size: 30px;
+      }
+
+      .month button {
+        font-size: 26px;
+        padding: 4px 8px;
+      }
+
+      .days div, .weekdays div {
+        font-size: 18px;
+        padding: 8px 0;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<div class="calendar">
-  <h2>CeAnna’s Calendar 💕</h2>
-  <div class="month">
-    <button onclick="changeMonth(-1)">←</button>
-    <span id="monthYear"></span>
-    <button onclick="changeMonth(1)">→</button>
-  </div> <br>
-  <div class="weekdays"> 
-    <div>Mon</div><div>Tue</div><div>Wed</div>
-    <div>Thu</div><div>Fri</div><div>Sat</div><div>Sun</div>
-  </div> <br>
-  <div class="days" id="days"></div>
-</div>
+  <div class="calendar">
+    <h2>CeAnna’s Calendar 💕</h2>
+    <div class="month">
+      <button onclick="changeMonth(-1)">←</button>
+      <span id="monthYear"></span>
+      <button onclick="changeMonth(1)">→</button>
+    </div> <br>
+    <div class="weekdays"> 
+      <div>Mon</div><div>Tue</div><div>Wed</div>
+      <div>Thu</div><div>Fri</div><div>Sat</div><div>Sun</div>
+    </div> <br>
+    <div class="days" id="days"></div>
+  </div>
 
-<script>
-  const monthYear = document.getElementById('monthYear');
-  const daysContainer = document.getElementById('days');
-  let currentDate = new Date();
+  <script>
+    const monthYear = document.getElementById('monthYear');
+    const daysContainer = document.getElementById('days');
+    let currentDate = new Date();
 
-  function renderCalendar(date) {
-    const year = date.getFullYear();
-    const month = date.getMonth();
-    const firstDay = new Date(year, month, 1).getDay(); // 0 (Sun) to 6 (Sat)
-    const lastDate = new Date(year, month + 1, 0).getDate();
+    function renderCalendar(date) {
+      const year = date.getFullYear();
+      const month = date.getMonth();
+      const firstDay = new Date(year, month, 1).getDay(); // 0 (Sun) to 6 (Sat)
+      const lastDate = new Date(year, month + 1, 0).getDate();
 
-    // Adjust so Monday is first day (0 = Monday, 6 = Sunday)
-    const adjustedStart = (firstDay + 6) % 7;
+      const adjustedStart = (firstDay + 6) % 7;
 
-    monthYear.innerText = `${date.toLocaleString('default', { month: 'long' })} ${year}`;
-    daysContainer.innerHTML = '';
+      monthYear.innerText = `${date.toLocaleString('default', { month: 'long' })} ${year}`;
+      daysContainer.innerHTML = '';
 
-    for (let i = 0; i < adjustedStart; i++) {
-      daysContainer.innerHTML += `<div></div>`;
-    }
+      // Fill in real dates only
+      for (let i = 0; i < adjustedStart; i++) {
+        daysContainer.innerHTML += `<div style="visibility: hidden;"></div>`;
+      }
 
-    for (let day = 1; day <= lastDate; day++) {
-      const currentLoopDate = new Date(year, month, day);
-      const weekDay = currentLoopDate.getDay();
+      for (let day = 1; day <= lastDate; day++) {
+        const currentLoopDate = new Date(year, month, day);
+        const weekDay = currentLoopDate.getDay();
+        let dayPosition = (weekDay + 6) % 7; // Adjust for Monday-first
 
-      const isToday =
-        day === new Date().getDate() &&
-        month === new Date().getMonth() &&
-        year === new Date().getFullYear();
+        const isToday =
+          day === new Date().getDate() &&
+          month === new Date().getMonth() &&
+          year === new Date().getFullYear();
 
-      // Adjust day position for Monday-start week (0=Mon,...6=Sun)
-      let dayPosition = (weekDay + 6) % 7;
+        const isWeekend = dayPosition === 5 || dayPosition === 6;
 
-      const isWeekend = dayPosition === 5 || dayPosition === 6; // Sat=5, Sun=6 in Monday-first layout
+        let classNames = [];
+        if (isToday) classNames.push("today");
+        if (isWeekend) classNames.push("weekend");
 
-      let classNames = [];
-      if (isToday) classNames.push("today");
-      if (isWeekend) classNames.push("weekend");
-
-      if (isToday) {
-        // Wrap number in span so it appears above heart emoji
-        daysContainer.innerHTML += `<div class="${classNames.join(' ')}"><span>${day}</span></div>`;
-      } else {
-        daysContainer.innerHTML += `<div class="${classNames.join(' ')}">${day}</div>`;
+        if (isToday) {
+          daysContainer.innerHTML += `<div class="${classNames.join(' ')}"><span>${day}</span></div>`;
+        } else {
+          daysContainer.innerHTML += `<div class="${classNames.join(' ')}">${day}</div>`;
+        }
       }
     }
-  }
 
-  function changeMonth(offset) {
-    currentDate.setMonth(currentDate.getMonth() + offset);
+    function changeMonth(offset) {
+      currentDate.setMonth(currentDate.getMonth() + offset);
+      renderCalendar(currentDate);
+    }
+
     renderCalendar(currentDate);
-  }
-
-  renderCalendar(currentDate);
-</script>
+  </script>
 
 </body>
 </html>
