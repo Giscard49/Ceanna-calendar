@@ -13,7 +13,7 @@
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: #fff0f5;
+      background: plum;
     }
 
     body {
@@ -26,17 +26,25 @@
     }
 
     .calendar {
-      background: #ffe4e1;
-      border-radius: 20px;
-      padding: 20px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      width: 100%;
-      max-width: 400px;
-    }
+  background-image:
+    linear-gradient(rgba(128, 0, 128, 0.8), rgba(128, 0, 128, 0.8)),
+    url('flower2.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+  
 
     .calendar h2 {
       text-align: center;
-      color: #ff69b4;
+      color: black;
       margin: 10px 0;
       font-size: 30px;
     }
@@ -45,7 +53,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      color: #d63384;
+      color: black;
       font-weight: bold;
       margin: 10px 0;
       font-size: 25px;
@@ -69,14 +77,14 @@
 
     .weekdays div {
     font-weight: bolder;
-    color: #c71585;
+    color: black;
     font-size: 21px;
   }
 
 /* Highlight weekend headers (Sat and Sun) */
 .weekdays div:nth-child(6),
 .weekdays div:nth-child(7) {
-  color: #923352;       /* A dark pink/red */
+  color: black;       /* A dark pink/red */
   font-weight: bold;
 }
 
